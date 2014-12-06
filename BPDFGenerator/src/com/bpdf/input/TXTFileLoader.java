@@ -28,7 +28,7 @@ public class TXTFileLoader
 		    String line;
 		    while ((line = br.readLine()) != null)
 		    {
-		    	stringBuilder.append(line);
+		    	stringBuilder.append(line+" ");
 		    }
 		}
 		catch(Exception e)
