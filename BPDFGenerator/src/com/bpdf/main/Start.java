@@ -14,17 +14,19 @@ import com.bpdf.pdf.BPDFDocumentGenerator;
  */
 public class Start {
 
-	public static void main(String[] args) 
+	public static void main(String[] args) throws COSVisitorException 
 	{
 		TXTFileLoader txtFileLoader = new TXTFileLoader();
 		try 
 		{
-			String sFileContent = txtFileLoader.loadTXTFileFromDisc("D:\\text.txt");
-			System.out.println(sFileContent);
+			//String sFileContent = txtFileLoader.loadTXTFileFromDisc("D:\\text.txt");
+			//System.out.println(sFileContent);
 			BPDFDocumentGenerator bpdfdocumentGenerator = new BPDFDocumentGenerator();
-			bpdfdocumentGenerator.generatePDFDocumentWithContentAsParameter("D:\\text.pdf", sFileContent);
+			//bpdfdocumentGenerator.generatePDFDocumentWithContentAsParameter("D:\\text.pdf", sFileContent);
+		
+			bpdfdocumentGenerator.generatePDFDocumentWithHTMLPathAsParameter("C:\\sampleHTML.html", "C:\\samplepdf.pdf");
 		}
-		catch (IOException | COSVisitorException e) 
+		catch (IOException e) 
 		{
 			e.printStackTrace();
 		}

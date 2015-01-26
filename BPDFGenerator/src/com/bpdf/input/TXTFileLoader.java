@@ -14,15 +14,15 @@ public class TXTFileLoader
 {
 	/**
 	 * 
-	 * @param sTXTPath - disc path to file
+	 * @param txtPath - disc path to file
 	 * @return TXTFile content as a String object
 	 * @throws IOException 
 	 */
-	public String loadTXTFileFromDisc(String sTXTPath) throws IOException
+	public String loadTXTFileFromDisc(String txtPath) throws IOException
 	{
-		String sTXTFile="";
+		String txtFile="";
 		StringBuilder stringBuilder = new StringBuilder();
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(sTXTPath)));
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtPath)));
 		try 
 		{
 		    String line;
@@ -39,8 +39,8 @@ public class TXTFileLoader
 		{
 		    br.close();
 		}
-		sTXTFile=stringBuilder.toString();
-		return sTXTFile;
+		txtFile=stringBuilder.toString();
+		return txtFile;
 
 	}
 }
